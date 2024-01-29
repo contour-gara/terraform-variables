@@ -402,3 +402,11 @@ FodyWeavers.xsd
 .DS_Store
 .AppleDouble
 .LSOverride
+
+### Terraform ###
+# Local .terraform directories
+**/.terraform/*
+
+# .tfstate files
+*.tfstate
+*.tfstate.*
