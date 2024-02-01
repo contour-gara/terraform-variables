@@ -13,7 +13,7 @@ terraform {
 }
 
 variable "test" {
-  default = null
+  default = "not change"
 }
 
 output "test" {

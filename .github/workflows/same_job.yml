@@ -1,0 +1,24 @@
+name: Same job
+
+on:
+  workflow_dispatch:
+
+jobs:
+  Set-enviroment-in-same-job:
+    runs-on: ubuntu-latest
+    env:
+      TF_VAR_test: changed
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4.1.1
+
+      - name: Set up terraform
+        uses: hashicorp/setup-terraform@v3.0.0
+        with:
+          terraform_version: 1.5.7
+
+      - name: Terraform init
+        run: terraform init
+
+      - name: Terraform plan
+        run: terraform plan
